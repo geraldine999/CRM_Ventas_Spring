@@ -1,55 +1,56 @@
-package crmVentasSpring;
+package crmVentasSpring.entities;
 
 import javax.persistence.*;
 
-@Table(name = "productos")
+
 @Entity
+@Table(name = "productos")
 public class ProductoEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_producto;
-    private String codigo_producto;
+    private Integer idproducto;
+    private String codigoproducto;
     private String categoria;
     private String nombre;
     private String descripcion;
-    private Double precio_unitario;
+    private Double preciounitario;
     private Integer stock;
 
-    public ProductoEntity(Integer id_producto, String codigo_producto, String categoria, String nombre, String descripcion, Double precio_unitario, Integer stock) {
-        this.id_producto = id_producto;
-        this.codigo_producto = codigo_producto;
+    public ProductoEntity(Integer idproducto, String codigoproducto, String categoria, String nombre, String descripcion, Double preciounitario, Integer stock) {
+        this.idproducto = idproducto;
+        this.codigoproducto = codigoproducto;
         this.categoria = categoria;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.precio_unitario = precio_unitario;
+        this.preciounitario = preciounitario;
         this.stock = stock;
     }
 
-    public ProductoEntity(String codigo_producto, String categoria, String nombre, String descripcion, Double precio_unitario, Integer stock) {
-        this.codigo_producto = codigo_producto;
+    public ProductoEntity(String codigoproducto, String categoria, String nombre, String descripcion, Double preciounitario, Integer stock) {
+        this.codigoproducto = codigoproducto;
         this.categoria = categoria;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.precio_unitario = precio_unitario;
+        this.preciounitario = preciounitario;
         this.stock = stock;
     }
 
     public ProductoEntity() {
     }
 
-    public Integer getId_producto() {
-        return id_producto;
+    public Integer getIdproducto() {
+        return idproducto;
     }
 
-    public void setId_producto(Integer id_producto) {
-        this.id_producto = id_producto;
+    public void setIdproducto(Integer id_producto) {
+        this.idproducto = id_producto;
     }
 
-    public String getCodigo_producto() {
-        return codigo_producto;
+    public String getCodigoproducto() {
+        return codigoproducto;
     }
 
-    public void setCodigo_producto(String codigo_producto) {
-        this.codigo_producto = codigo_producto;
+    public void setCodigoproducto(String codigo_producto) {
+        this.codigoproducto = codigo_producto;
     }
 
     public String getCategoria() {
@@ -76,12 +77,12 @@ public class ProductoEntity {
         this.descripcion = descripcion;
     }
 
-    public Double getPrecio_unitario() {
-        return precio_unitario;
+    public Double getPreciounitario() {
+        return preciounitario;
     }
 
-    public void setPrecio_unitario(Double precio_unitario) {
-        this.precio_unitario = precio_unitario;
+    public void setPreciounitario(Double precio_unitario) {
+        this.preciounitario = precio_unitario;
     }
 
     public Integer getStock() {
@@ -95,12 +96,12 @@ public class ProductoEntity {
     @Override
     public String toString() {
         return "ProductoEntity{" +
-                "id_producto=" + id_producto +
-                ", codigo_producto='" + codigo_producto + '\'' +
+                "id_producto=" + idproducto +
+                ", codigo_producto='" + codigoproducto + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", precio_unitario=" + precio_unitario +
+                ", precio_unitario=" + preciounitario +
                 ", stock=" + stock +
                 '}';
     }

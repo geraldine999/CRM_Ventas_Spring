@@ -1,4 +1,4 @@
-package crmVentasSpring;
+package crmVentasSpring.entities;
 
 import javax.persistence.*;
 
@@ -7,9 +7,9 @@ import javax.persistence.*;
 public class ClienteEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_cliente;
+    private Integer idcliente;
     private String nombre;
-    private String nombre_Empresa;
+    private String nombreempresa;
     private String cargo;
     private String telefono;
     private String mail;
@@ -17,30 +17,30 @@ public class ClienteEntity {
     public ClienteEntity() {
     }
 
-    public ClienteEntity(Integer id_cliente, String nombre, String nombre_Empresa, String cargo, String telefono, String mail) {
-        this.id_cliente = id_cliente;
+    public ClienteEntity(Integer idcliente, String nombre, String nombreempresa, String cargo, String telefono, String mail) {
+        this.idcliente = idcliente;
         this.nombre = nombre;
-        this.nombre_Empresa = nombre_Empresa;
+        this.nombreempresa = nombreempresa;
         this.cargo = cargo;
         this.telefono = telefono;
         this.mail = mail;
     }
 
-    public ClienteEntity(String nombre, String nombre_Empresa, String cargo, String telefono, String mail) {
+    public ClienteEntity(String nombre, String nombreempresa, String cargo, String telefono, String mail) {
         this.nombre = nombre;
-        this.nombre_Empresa = nombre_Empresa;
+        this.nombreempresa = nombreempresa;
         this.cargo = cargo;
         this.telefono = telefono;
         this.mail = mail;
     }
 
 
-    public Integer getId_cliente() {
-        return id_cliente;
+    public Integer getIdcliente() {
+        return idcliente;
     }
 
-    public void setId_cliente(Integer idCliente) {
-        this.id_cliente = idCliente;
+    public void setIdcliente(Integer idCliente) {
+        this.idcliente = idCliente;
     }
 
     public String getNombre() {
@@ -51,12 +51,12 @@ public class ClienteEntity {
         this.nombre = nombre;
     }
 
-    public String getNombre_Empresa() {
-        return nombre_Empresa;
+    public String getNombreempresa() {
+        return nombreempresa;
     }
 
-    public void setNombre_Empresa(String nombreEmpresa) {
-        this.nombre_Empresa = nombreEmpresa;
+    public void setNombreempresa(String nombreEmpresa) {
+        this.nombreempresa = nombreEmpresa;
     }
 
     public String getCargo() {
@@ -86,9 +86,9 @@ public class ClienteEntity {
     @Override
     public String toString() {
         return "ClienteEntity{" +
-                "idCliente=" + id_cliente +
+                "idCliente=" + idcliente +
                 ", nombre='" + nombre + '\'' +
-                ", nombreEmpresa='" + nombre_Empresa + '\'' +
+                ", nombreEmpresa='" + nombreempresa + '\'' +
                 ", cargo='" + cargo + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", mail='" + mail + '\'' +
